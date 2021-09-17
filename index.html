@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <meta name="description" content="IWT Micro Project">
+    <meta name="description" content="IWT Project">
     <meta name="author" content="Neha Jha">
     <link rel="canonical" href="https://njha07.github.io/B519029-IWT-MicroProject/" />
     <meta name="robots" content="index, follow">  
@@ -12,105 +12,166 @@
     
     <!-- Required meta properties -->
     <meta property="og:type" content="Project" />
-    <meta property="og:title" content="IWT Micro Project" />
+    <meta property="og:title" content="IWT Project" />
     <meta property="og:description" content="Research Paper Web Page" />
     <meta property="og:image" content="LINK TO THE IMAGE FILE" />
-   
-    <!-- Icon -->
-    <link rel="icon" href="/Icons/logop.png" sizes="65x65" type="image/png">
+  
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/style/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="/style/fontawesome.min.css"/>
 
     <!-- CSS Linked -->
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Arimo:wght@500&family=Kaisei+Tokumin:wght@500&family=Libre+Baskerville:wght@700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@700&family=Nanum+Myeongjo:wght@700&display=swap');
-
+        @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins',sans-serif;
+        }
         body{
-            margin: 6em;
-            color: #121318;
-            font-family: 'Open Sans', sans-serif;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+            margin:5em;
         }
-        .center{
-            text-align: center;
+        .container{
+            max-width: 75em;
+            width: 100%;
+            background-color: #fff;
+            padding: 20px 100px;
+            margin:30px;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.15);
         }
-        h1{
-            font-family: 'Libre Baskerville', serif;
-            margin-bottom : 1.3em;
-            font-size: 3.57em;
-        }
-        h2{
-            font-family: 'Kaisei Decol', serif;
+        .container .title{
             font-size: 2.5em;
-        }
-        h3{
-            font-family: 'Kaisei Decol', serif;
-            font-size: 1.55em;
-        }
-        h4{
+            font-weight: 600;
+            position: relative;
             font-family: 'Libre Baskerville', serif;
-            font-size: 2em;
-
-        }
-
-        h5{
             text-align: center;
-            font-family: 'Kaisei Decol', serif;
-            font-size: 1.8em;
+        }
 
+        .content form .user-details{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px 0 0px 0;
         }
-        p{
-            font-size: 1.34em;
-            font-family: 'Kaisei Tokumin', serif;
-            line-height: 1.28em;
-        }
-        li{
+        .details{
+            font-family: 'Hind Siliguri', sans-serif;
             font-size: 1.4em;
-            font-family: 'Kaisei Tokumin', serif;
+        }
+        label{
+            font-family: 'Hind Siliguri', sans-serif;
+            font-size: 1.15em;
         }
 
-        .writer{
-            font-family: 'Arimo', sans-serif;
-            font-size: 2.2em;
-            line-height: 1.2em;
+        .ed label{
+            font-size: 1.2em;
         }
 
-        .stable1{
-            margin:2em 14em;
+        .po label{
+            font-size: 1.15em;
         }
-        .stable2{
-            margin:2em 7em;
+
+
+        .inputCity{
+            font-family: 'Hind Siliguri', sans-serif;
+            font-size: 1em;
         }
-        .stable3{
-            margin:2em 9em;
+
+        form .user-details .input-box{
+            margin-bottom: 15px;
+            width: calc(100% / 2 - 20px);
         }
-        .stable4{
-            margin:2em 15em;
+        form .input-box span.details{
+            display: block;
+            font-weight: 500;
+            margin-bottom: 5px;
         }
-        .stable1 td,
-        .stable2 td,
-        .stable3 td,
-        .stable4 td{
-            font-size: 1.9em;
+        .user-details .input-box input{
+            height: 45px;
+            width: 100%;
+            outline: none;
+            font-size: 16px;
+            border-radius: 5px;
+            padding-left: 15px;
+            border: 1px solid #ccc;
+            border-bottom-width: 2px;
+            transition: all 0.3s ease;
+        }
+        .user-details .input-box input:focus,
+        .user-details .input-box input:valid{
+            border-color: #9b59b6;
+        }
+        
+        form input[type="radio"]{
+            display: none;
+        }
+        form .button{
+            height: 45px;
+            margin: 35px 0
+        }
+        form .button input{
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+        border: none;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background: linear-gradient(135deg, #71b7e6, #9b59b6);
+        }
+        form .button input:hover{
+        /* transform: scale(0.99); */
+        background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+        }
+
+        @media(max-width: 584px){
+            .container{
+            max-width: 100%;
+            }
+            form .user-details .input-box{
+                margin-bottom: 15px;
+                width: 100%;
+            }
+            form .category{
+                width: 100%;
+            }
+            .content form .user-details{
+                max-height: 300px;
+                overflow-y: scroll;
+            }
+            .user-details::-webkit-scrollbar{
+                width: 5px;
+            }
+        }
+
+        @media(max-width: 459px){
+            .container .content .category{
+                flex-direction: column;
+            }
+        }
+
+        .footer{
             text-align: center;
-            padding: 0.08em;
-            border:0.13em solid black;
         }
-        .stable1 th,
-        .stable2 th,
-        .stable3 th,
-        .stable4 th{
-            font-size: 1.3em;
-            border:0.13em solid black;
+
+        .imp{
+          color:rgb(219, 48, 48)
         }
-        .stable4 tbody >td{
-            font-size: 1.5em;
-            padding: 0.08em;
-        }
-       
+
     </style>
 
     <title>IWT-MicroProject</title>
@@ -118,858 +179,279 @@
 </head>
 <body translate="no">
 
-    <!-- Navigation -->
-        <div class="center">
-            <h1>A Survey on Secure Hierarchical Routing Protocols in Wireless Sensor Networks </h1>
-            <p class="writer">
-                Suraj Sharma and Sanjay Kumar Jena
-                <br> Department of Computer Science and Engineering 
-                <br> National Institute of Technology Rourkela, Odisha, India 
-                <br> suraj.atnitrkl@gmail.com, skjena@nitrkl.ac.in
-            </p>
-        </div>
+    <!-- Navigation --> 
 
+    <div class="container">
+        <div class="title">Job application</div>
         <br><br>
 
-            <h2>ABSTRACT</h2>
-            <p>
-                WSNs usually deployed in the targeted area to monitor or sense the environment and depending upon the application sensor node transmit the data to the base station. 
-                To re-lay the data intermediate nodes communicate together, select appropriate routing path and transmit data towards the base station. 
-                Routing path selection depends on the routing pro-tocol of the network. Base station should receive unaltered and fresh data. To fulfill this requirement, 
-                routing protocol should be energy-eﬃcient and secure. Hierarchical or cluster-base routing protocol for WSNs is the most energy-eﬃcient among other routing protocols. 
-                In this paper, we study dif-ferent hierarchical routing technique for WSNs. Further we analyze and compare secure hierarchical routing protocols based on various criteria.
-            </p><br>
-            <h3>Categories and Subject Descriptors</h3>
-                <p>
-                    C.2 <b>[Computer-Communication Networks]</b>: <i>Data communi-cations, Security and protection</i>; 
-                    <br>
-                    C.2.2 <b>[Computer-Communication Networks]</b>: Network Protocols—-<i>Routing protocols</i>.
-                </p><br>
+        <div class="content">
+            <form action="#">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">First Name <span class="imp">*</span></span>
+                        <input type="text" placeholder="Enter your first name" required>
+                    </div>
 
-            <h3>General Terms</h3>
-                <p>
-                    Security.
-                </p><br>
+                    <div class="input-box">
+                        <span class="details">Last Name <span class="imp">*</span></span>
+                        <input type="text" placeholder="Enter your last name" required>
+                    </div>
 
-            <h3>Keywords</h3>
-            <p>
-                Wireless sensor network, Hierarchical (cluster-based) routing protocol, Routing security.
-            </p><br>
-
-
-            <h2>1. &nbsp;INTRODUCTION</h2>
-            <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The growth of micro devices, small memory chip and wire-less communication technology invented the tiny sensor de-vice called sensor node. 
-                Sensor node constrained with the limited battery power, small memory, less computation and communication capability. 
-                These sensor nodes are responsi-ble for sensing the data from the environment and sending the processed data to the base station though intermediate
-               
-                sensor nodes. These self-configurable sensor nodes form a multi hop and collaborative network called Wireless Sensor Network. In the near future WSNs will become very popular and reliable for remote monitoring and sensing technology. There is a wide verity of application area ranges from forest fire monitoring to building security monitoring, health field to battle filed, animal habitat monitoring and nuclear firm monitoring are the challenging application of the WSNs.
-               <br>
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Main task of the sensor node is to sense data and send it to the base station in multi hop environment for this routing path is essential. For computing the routing path from the source node to the base station there is huge number of pro-posed routing protocols exist. Routing protocols in WSNs mainly classified in two categories[1]: <i>Network Structure and Protocol Operation. Network Structure</i> is further classified into Flat, Hierarchical and Location based routing. <i>Protocol Operation</i> is further classified into Negotiation, Multi-path, Query, QoS and Coherent based routing. All these routing protocols are very useful for routing path computation, but it highly aﬀect the WSNs performance. So the development of the routing protocol should be for balancing the load among the sensor nodes and prolonging the network lifetime.
-               
-               <br>
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nowadays researchers are working towards the energy ef-ficient routing protocol. Hierarchical routing protocols are the most energy . eﬃcient among rest of the protocols for WSNs. In hierarchical routing protocol, network is divided into clusters and cluster head is assigned to each cluster. These cluster heads are higher energy nodes, which aggre-gate, process and transmit the information to the BS, while the lower energy nodes used to sense the targeted area and send the data to CH. Hierarchical routing is an eﬃcient way to reduce the total energy consumption of the network. Data aggregation and processing in the CH greatly reduce total number of sent messages to the BS. Actually, the goal of de-veloping hierarchical routing protocol is to minimize the net-work traﬃc towards the base station.
-               
-               <br>
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generally, security issue in Hierarchical routing protocol have not given much attention, since most of the routing protocol in WSNs have not been developed with security in mind. Many hierarchical routing protocols have been de-veloped, where energy eﬃciency is the main goal. In many applications like military and battle field, data is important and have to maintain secrecy in data communication between sensor nodes and BS. In this paper we discuss, analyze and list the advantages and drawback of secure Hierarchical Routing Protocol techniques proposed till now.
-               
-               <br>
-               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The rest of the paper is organised as follows. Section 2 describes some basic hierarchical routing protocols. Security
-               goals in WSNs are listed in section 3. Section 4 introduces diﬀerent possible attacks on routing protocol. In section 5 verious secure routing protocols is covered. 
-               In section 6, we does analysis on diﬀerent secure routing protocols. We concludes the paper in section 7.
-               
-            </p><br>
-
-            <h2>2. &nbsp;HIERARCHICAL ROUTING PROTOCOLS
-            </h2>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hierarchical or cluster-based routing, originally proposed for wired network to enhance scalability and eﬃciency. In WSNs, Hierarchical routing techniques is used to enhance energy-eﬃciency 
-                and hence prolong the network lifetime. Reservation-based scheduling, collision avoidance, data ag-gregation by cluster head, uniform energy dissipation, fair allocation of channel and lower 
-                latency are some characteris-tics of hierarchical topology routing protocol[1]. 
-                <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Low energy adaptive clustering hierarchy (LEACH)[6] is one of the very first hierarchical routing protocol. LEACH in-cludes distributed clustering and utilizes randomize rotation of cluster 
-                heads to evenly distribute the energy load in the network. It calculates a threshold value to elect the cluster head. LEACH protocol is very useful for the applications, where constant 
-                monitoring is required. TL-LEACH[12] is the extension of the LEACH, where TL stands for Two-Level. It utilizes two level of clustering where primary CH com-municate with secondary CH in 
-                order to send the data, for better throughput. TL-LEACH form clusters based on mini-mum distance of nodes to their corresponding CH, EECS[24] extends this by dynamic sizing of clusters based 
-                on cluster distance from the base station. CH election is based on the residual energy of the node.
-                <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Power-eﬃcient gathering in Sensor Information System (PEGASIS)[11] is a near-optimal chain-based protocol. In PE-GASIS, nodes need to communicate to its nearest neighbor and they propagate 
-                to the base-station. Unlike LEACH, PE-GASIS avoids cluster formation and uses only one node in a chain to transmit to the base-station[1]. In this way it increase the lifetime of the network 
-                and allow only local communi-cation for less bandwidth consumption in communication. Further reduce the energy consumption of PEGASIS, CCS[9] has been proposed. In CCS, the whole network is 
-                divided in co-centric circular tracks and each track presents a cluster. Track level has been assign to each track, depends upon the distance from the base-station. Data communication is done 
-                through tracks. TSC[5] protocol is the enhance version of CCS, by further dividing tracks into sectors.
-                <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Threshold sensitive energy eﬃcient sensor network proto-col (TEEN)[14], is a data-centric protocol designed for time-critical application. In TEEN, the transmission of the sensed data 
-                is depends upon threshold values, called Hard Thresh-old (HT) and Soft Threshold (ST), which is broadcasted by CH. APTEEN[15] is the enhances version of TEEN and goal is to capturing 
-                both periodic data and time critical data. APTEEN supports three diﬀerent query types: historical, one-time and persistent query[13].
-                <br>
-                Further to reduce the energy consumption and prolong the lifetime of the network many hierarchical routing protocols have been proposed.
-                </p><br>
-
-
-            <h2>3. &nbsp;SECURITY GOALS IN WSNS
-            </h2>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In an ideal world, we ensure the security goal if every eligible node receives all the messages intended to it. In the presence of resourceful adversary, security goals guarantee the confidentiality, integrity, authenticity, availability and freshness of data.
-            </p>
-
-            <ul>
-                <li><b style="font-size:1.25em;">Confidentiality:</b> &nbsp;&nbsp;&nbsp;Data should not leak by the sensor nodes to other network. While communicating the data in the network, no one can understood except intended recipient[20]. 
-                    The standard way to keep the sensitive data secret is to use the cryptography technique, hence achieve the confidentiality.</li>
-                <li><b style="font-size:1.25em;">Integrity: </b>&nbsp;&nbsp;&nbsp;Data should reach to the intended receiver without any alteration in the data. Data loss or dam-age can even occur due to the communication environ-ment. 
-                    The integrity mechanism should ensure that no adversary can manipulate the communicated data[20]. Integrity of the data can be maintain by the techniques like message digest and MAC.</li>
-                <li><b style="font-size:1.25em;">Authenticity: </b>&nbsp;&nbsp;&nbsp;Authentication is necessary for maintain-ing the network, coordinating with the sensor node and sending or receiving the information. An adversary can easily inject 
-                    the messages in the network, so receiver should ensure that the received message is originated by the correct source[20]. Informally, data authenticity allows a receiver to verify that 
-                    the data really sent by the authorized user. Authenticity can be maintained by the cryptography mechanism like MAC.</li>
-                <li><b style="font-size:1.25em;">Availability: </b>&nbsp;&nbsp;&nbsp;Availability ensures that the services of a network should be available always even in presence of an internal or external attacks such as a denial of service 
-                    attack (DoS). Diﬀerent mechanisms have been proposed by the researches to achieve this goal[20].</li>
-                <li><b style="font-size:1.25em;">Freshness: </b>&nbsp;&nbsp;&nbsp;Freshness implies that receiver receives the recent and fresh data and ensures that no adversary can replay the old data. This requirement is especially important when 
-                    the WSN nodes use sharedkeys for message communication, where a potential adversary can launch a replay attack using the old key as the new key is being refreshed and propagated to all 
-                    the nodes in the WSN[20]. To achieve the freshness the mechanism like nonce or time stamp should add to each data packet.</li>
-            </ul><br>
-
-
-            <h2>4. &nbsp;ATTACKS ON ROUTING PROTOCOL
-            </h2>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Many sensor network routing protocols were very simple and not developed as security in mind, so the adversary can launch various attacks in the network. Mainly network layer protocol 
-                (i.e. routing protocol) suﬀers from many attacks like; spoofing or altering the route information, selective forwarding, sinkhole attack, wormhole attack, Sybil attack, HELLO flood attack etc.
-                </p><br>
-
-                <h4>4.1 &nbsp;&nbsp;Spoofing, Altering or Replaying the route information</h4>
-                <p>An adversary can launch the routing information corrup-tion by spoofing, altering or replying the routing information. By this an adversary can attracts or redirects the traﬃc,
-                   in-creases the latency, generate routing loops or creates false error[10] etc.</p><br>
-
-                <h4>4.2 &nbsp;&nbsp;Selective forwarding attack</h4>
-                <p>In the selective forwarding attack, malicious node may refuse to forward certain packet and simply drop it. If an adversary drops the entire received packet, it behaves like a 
-                    blackhole attack[10]. An adversary explicitly includes on the path of data flow to perform selective forwarding.
-                </p><br><br><br>
-
-                
-                <h5>Table 1: Secure Routing Protocols analysis based on security goals</h5>
-
-                <div class="stable1">
-
-                    <div class="table-responsive">
-                        <table class="table table-bordered">
-                            <thead>
-                            <tr>
-                                <th style="font-size: 1.5em;border:0.13em solid black;" scope="col">Secure Routing Protocol</th>
-                                <th style="font-size: 1.5em;" sscope="col">Confidentiality</th>
-                                <th style="font-size: 1.5em;" sscope="col">Integrity</th>
-                                <th style="font-size: 1.5em;" sscope="col">Freshness</th>
-                                <th style="font-size: 1.5em;" sscope="col">Authenticity</th>
-                                <th style="font-size: 1.5em;" sscope="col">Availability</th>
-                                
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <th scope="row">M. Bohge et al.</th>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">SRPSN</th>
-                                <td><span>&#10003;</span> </td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">LHA-SP</th>
-                                <td><span>&#10003;</span> </td>
-                                <td></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">F-LEACH</th>
-                                <td><span>&#10003;</span> </td>
-                                <td><span>&#10003;</span></td>
-                                <td><span>&#10003;</span></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">SLEACH</th>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">SHEER</th>
-                                <td><span>&#10003;</span></td>
-                                <td><span>&#10003;</span></td>
-                                <td><span>&#10003;</span></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">R. Srinath et al.</th>
-                                <td><span>&#10003;</span></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">NHRPA</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Sec-LEACH</th>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">SS-LEACH</th>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">RLEACH</th>
-                                <td><span>&#10003;</span></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">ESMR</th>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">SRPBCG</th>
-                                <td><span>&#10003;</span></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                            </tr>
-                            
-                            </tbody>
-                        </table>
+                    <div class="input-box">
+                        <span class="details">Email <span class="imp">*</span></span>
+                        <input type="text" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-box">
+                      <span class="details">Alternate/ Instituional Email ID</span>
+                      <input type="text" placeholder="Enter another email" required>
+                  </div>
+                    <div class="input-box">
+                        <span class="details">Phone Number <span class="imp">*</span></span>
+                        <input type="text" placeholder="Enter your number" required>
+                    </div>
+                    <div class="input-box">
+                      <span class="details">Date of Birth <span class="imp">*</span></span>
+                      <input type="text" placeholder="Enter your date of birth" required>
+                    </div>
+                    
+                    <div class="input-box">
+                        <span class="details"><br>Address</span>
                     </div>
                 </div>
-                <br><br><br>
 
 
-
-                    <h5>Table 2: Secure routing protocols comparison based on prevention of security attacks</h5>
-
-                <div class="stable2">
-
-                    <div class="table-responsive">
-                        <table class="table table-bordered">
-                            <thead>
-                            <tr>
-                                <th style="font-size: 1.5em;border:0.13em solid black;" scope="col">Secure Protocol</th>
-                                <th style="font-size: 1.5em;" scope="col">Alter/Replay</th>
-                                <th style="font-size: 1.5em;" scope="col">Selective</th>
-                                <th style="font-size: 1.5em;" scope="col">Sinkhole</th>
-                                <th style="font-size: 1.5em;" scope="col">Sybil</th>
-                                <th style="font-size: 1.5em;" scope="col">Wormhole</th>
-                                <th style="font-size: 1.5em;" scope="col">HELLO</th>
-                                <th style="font-size: 1.5em;" scope="col">Outsider</th>
-                                <th style="font-size: 1.5em;" scope="col">Node Compromise</th>
-                                
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <th scope="row">M. Bohge et al.</th>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td><span>&#10003;</span></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">SRPSN</th>
-                                <td><span>&#10003;</span></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">LHA-SP</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">F-LEACH</th>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">SLEACH</th>
-                                <td><span>&#10003;</span></td>
-                                <td><span>&#10003;</span></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">SHEER</th>
-                                <td><span>&#10003;</span></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">R. Srinath et al.</th>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td><span>&#10003;</span></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">NHRPA</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Sec-LEACH</th>
-                                <td><span>&#10003;</span></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">SS-LEACH</th>
-                                <td><span>&#10003;</span></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td><span>&#10003;</span></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">RLEACH</th>
-                                <td><span>&#10003;</span></td>
-                                <td><span>&#10003;</span></td>
-                                <td><span>&#10003;</span></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">ESMR</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">SRPBCG</th>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td><span>&#10003;</span></td>
-                            </tr>
-                            
-                            </tbody>
-                        </table>
+                <div class="form-group">
+                    <label for="inputAddress" style="font-family: 'Hind Siliguri', sans-serif; font-size: 1.13em;">Street Address <span class="imp">*</span></label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputCity" style="font-family: 'Hind Siliguri', sans-serif; font-size: 1.13em;">City <span class="imp">*</span></label>
+                      <input type="text" class="form-control" id="inputCity">
                     </div>
-                </div><br><br><br>
+                    <div class="form-group col-md-4">
+                        <label for="inputState" style="font-family: 'Hind Siliguri', sans-serif; font-size: 1.13em;">State / Province <span class="imp">*</span></label>
+                        <select id="inputState" class="form-control">
+                          <option selected>Choose...</option>
+                          <option>Andhra Pradesh</option>
+                          <option>Arunachal Pradesh</option>
+                          <option>Assam</option>
+                          <option>Bihar</option>
+                          <option>Chhattisgarh</option>
+                          <option>Goa</option>
+                          <option>Gujarat</option>
+                          <option>Himachal Pradesh</option>
+                          <option>Jharkhand</option>
+                          <option>Karnataka</option>
+                          <option>Kerala</option>
+                          <option>Madhya Pradesh</option>
+                          <option>Maharashtra</option>
+                          <option>Manipur</option>
+                          <option>Meghalaya</option>
+                          <option>Mizoram</option>
 
-                <h4>4.3    &nbsp;&nbsp;Sinkhole and Wormhole attack</h4>
-                <p>Basically, in the both sinkhole and wormhole attacks[10]; the adversary tries to attract all the traﬃc from a particular area through a compromised node. Sinkhole attack 
-                    mainly works by making a compromised node look attractive to the neighbor nodes to route the data packet and generally spoof, modify or drop the packet. In this way, sinkhole 
-                    attack give birth to many attacks like; selective forwarding, blackhole, tempering the routing information etc.
-
-                    <br>
-                    An adversary launch wormhole with two distant malicious nodes and try to attract the traﬃc by showing one hop dis-tance to the sink. Wormhole attack is very diﬃcult to 
-                    detect because it uses out-of-bound channel to route packets [10].
-                </p><br>
-
-                <h4>4.4    &nbsp;&nbsp;Sybil attack</h4>
-                <p>In this attack [10], a single node presents multiple identities to the other node in the network. It tries to mislead the node in neighbor detection, route formation and 
-                    topology maintenance. The Sybil attack is a significant threat to many geographic and multipath routing protocols.
-                </p><br>
-
-                <h4>4.5    &nbsp;&nbsp;HELLO flood attack</h4>
-                <p>In the HELLO flood attack[10], an adversary rebroadcast overheard packet with enough power to be received by every node in the network. The protocols that generally use the local topology like neighbor information for route creation and topology maintenance get aﬀected by this attack.
-                </p><br><br>
-
-
-            <h2>5. &nbsp;SECURE HIERARCHICAL ROUTING PROTOCOLS</h2>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Many previous Hierarchical routing protocols assume a safe and secure environment where all sensor nodes cooper-ate with no attack present. But the real world environment is totally opposite, there are many attacks that aﬀects the per-formance of routing protocol. Attacker use diﬀerent kinds of technique to launch attack and damage or harm the data and the network. In order to secure the hierarchical routing protocol many works have been proposed. In this section we discuss those techniques, analyze them and list out the advantages and disadvantages associated with each secure hierarchical routing protocol.
-            </p><br>
-                <h4>5.1    &nbsp;&nbsp;M. Bohge et al.</h4>
-                <p>Secure hierarchical routing protocol by using three tier ad hoc network topology has been proposed[2]. It used TESLA certificates for authentication. The use of massage 
-                    authenti-cation code in the framework protects all data against mali-cious modification and information forgery. It presented an authentication framework for an application 
-                    driven hierar-chical ad hoc sensor network and deals with compromised nodes. But it cannot prevent intruders from coming into the network and sending packets and cannot 
-                    protect against eavesdropping.
-                </p><br><br><br>
-
-                <h5>Table 3: Evaluation of secure routing protocols based on security mechanism used</h5>
-
-                <div class="stable3">
-                    <div class="table-responsive">
-                        <table class="table table-bordered">
-                            <thead>
-                            <tr>
-                                <th style="font-size: 1.5em;border:0.13em solid black;" scope="col">Secure Protocol</th>
-                                <th style="font-size: 1.5em;" scope="col">AsymmetricKey</th>
-                                <th style="font-size: 1.5em;" scope="col">Symmetrickey</th>
-                                <th style="font-size: 1.5em;" scope="col">PairwiseKey</th>
-                                <th style="font-size: 1.5em;" scope="col">KeyPredist</th>
-                                <th style="font-size: 1.5em;" scope="col">OnewayHASHchain</th>
-                                <th style="font-size: 1.5em;" scope="col">MAC</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <th scope="row">M. Bohge et al.</th>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">SRPSN</th>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">LHA-SP</th>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">F-LEACH</th>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">SLEACH</th>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">SHEER</th>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">R. Srinath et al.</th>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">NHRPA</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Sec-LEACH</th>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">SS-LEACH</th>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">RLEACH</th>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">ESMR</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td><span>&#10003;</span></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">SRPBCG</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            
-                            </tbody>
-                        </table>
+                        </select>
                     </div>
-                </div><br><br><br>
-
-
-            
-
-                <h4>5.2    &nbsp;&nbsp;SRPSN</h4>
-                <p>In SRPSN[22] an energy-eﬃcient level-based hierarchical routing technique proposed. They have designed a secure routing protocol for WSNs to safe guard from diﬀerent at-tacks by 
-                    building a secure route from the source to sink node. They used the symmetric key cryptography and proposed a group key management scheme, which contains group com-munication policies,
-                     group membership requirements and an algorithm for generating a distributed group key for secure communication. Every node contributing its partial key to generate a group key. 
-                     One drawback associated with this protocol is that, while changing the CH all group key i.e. inter-cluster and intra-cluster key should have to compute once again, which is a 
-                     cumbersome task.
-                </p>
-
-                <h4>5.3    &nbsp;&nbsp;LHA-SP</h4>
-                <p>LHA-SP[18]is the first work focusing on securing hetero-geneous hierarchical WSNs with arbitrary number of levels. It uses the symmetric key scheme and took following as-sumption: 
-                    an adversary will take a certain amount of time to compromise the group key or temper with a node and this amount of time exceeds, that require setup the network. It prevents intruders 
-                    (outsider attacker) to taking activity, tem-pering with or injecting message into the networks and pre-vents eavesdropping on communication between legitimate nodes. Authentication and 
-                    confidentiality is maintained by shared pairwise key. It deals with orphan node problem.</p>
-
-                <h4>5.4    &nbsp;&nbsp;F-LEACH</h4>
-                <p>L. B. Oliveria et al.[17] propoesed FLEACH, a protocol for securing node to node communication in LEACH-based network. It used random key pre-distribution scheme with symmetric 
-                    key cryptography to enhance security in LEACH. FLEACH provides authenticity, integrity, confidentiality and freshness to node-to-node communication. But it is valnera-ble to node 
-                    capturing attack.
-                </p>
-
-                <h4>5.5    &nbsp;&nbsp;SLEACH</h4>
-                <p>This is the first modified secure version of LEACH called SLEACH[4], which investigated the problem of adding security to cluster-based communication protocol for homoge-neous 
-                    wireless sensor networks consisting of sensor nodes with severely limited resources. SLEACH provides security in LEACH by using the building block of SPINS (Security Pro-tocol for 
-                    Sensor Network), symmetric-key methods and MAC (Message Authentication Code). SLEACH protects against selective forwarding, sinkhole and HELLO flooding attacks. It prevents intruder 
-                    to send bogus sensor data to the CH and CH to forward bogus message. But SLEACH cannot prevent to crowd the time slot schedule of a cluster, causing DoS at-tack or simply lowering
-                    the throughput of the CH and does not guarantee data confidentiality. The solution is meant to protect only outsider attack.
-                </p>
-                <h4>5.6    &nbsp;&nbsp;SHEER</h4>
-                <p>J. Ibriq et al.[8] proposed a secure hierarchical energy-eﬃcient routing protocol(SHEER) which provides secure com-munication at the network layer. 
-                    It uses the probabilistic broadcast mechanism and three-level hierarchical clustering architecture to improve the network energy performance and increase its lifetime. 
-                    To sucure the routing SHEER imple-ments HIKES a secure key transmission protocol and sym-metric key cryptography. They have compared the perfor-mance with the secure LEACH using HIKES.
-                </p>
-                <h4>5.7    &nbsp;&nbsp;R. Srinath et al.</h4>
-                <p>This protocol is based on LEACH protocol; named Au-thentication Confidentiality cluster based secure routing pro-tocol[21]. It uses both public key (in digital signature) and private 
-                    key cryptography. This protocol deals with interior adversary or compromised node. Because of the high com-putational requirement (use of public key cryptography), 
-                    it is not eﬃcient for the WSNs.</p>
-                <h4>5.8    &nbsp;&nbsp;NHRPA</h4>
-                <p>The proposed routing protocol[7] can adopt suitable rout-ing technology for the nodes according to the distance of node to the BS, density of the nodes distribution and 
-                    resid-ual energy of the nodes. NHRPA compared with Directed Diﬀusion (DD), LEACH and PEGASIS in terms of the energy usage, packet latency and security in the presence of 
-                    node compromised attacks, results show that the proposed rout-ing algorithm is more eﬃcient for WSNs. It does not use any cryptography technique in the routing protocol, 
-                    so the overhead is less. But it only deals with the node compromise.
-                </p><br><br><br>
-
-                <h5>Table 4: Analysis of secure routing protocols based on fundamental aspect</h5>
-                <div class="stable4">
-
-                    <div class="table-responsive">
-                        <table class="table table-bordered">
-                            <thead>
-                            <tr>
-                                <th style="font-size: 1.5em;border:0.13em solid black;" scope="col">Secure Protocol</th>
-                                <th style="font-size: 1.5em;" scope="col">Basic Protocol</th>
-                                <th style="font-size: 1.5em;" scope="col">Deal with orphan node</th>
-                                <th style="font-size: 1.5em;" scope="col">Energy Eﬃciency</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <th scope="row">M. Bohge et al.</th>
-                                <td></td>
-                                <td></td>
-                                <td>Medium</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">SRPSN</th>
-                                <td></td>
-                                <td></td>
-                                <td>Good</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">LHA-SP</th>
-                                <td></td>
-                                <td style="font-size: 1.9em;padding: 0.08em;"><span>&#10003;</span></td>
-                                <td>Medium</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">F-LEACH</th>
-                                <td>LEACH</td>
-                                <td></td>
-                                <td>Medium</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">SLEACH</th>
-                                <td>LEACH</td>
-                                <td></td>
-                                <td>Medium</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">SHEER</th>
-                                <td></td>
-                                <td></td>
-                                <td>Good</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">R. Srinath et al.</th>
-                                <td>LEACH</td>
-                                <td></td>
-                                <td>Medium</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">NHRPA</th>
-                                <td></td>
-                                <td></td>
-                                <td>Good</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Sec-LEACH</th>
-                                <td>LEACH</td>
-                                <td></td>
-                                <td>Medium</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">SS-LEACH</th>
-                                <td></td>
-                                <td></td>
-                                <td>Good</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">RLEACH</th>
-                                <td>LEACH</td>
-                                <td style="font-size: 1.9em; padding: 0.08em;"><span>&#10003;</span></td>
-                                <td>Medium</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">ESMR</th>
-                                <td>LEACH</td>
-                                <td></td>
-                                <td>Medium</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">SRPBCG</th>
-                                <td></td>
-                                <td></td>
-                                <td>Medium</td>
-                            </tr>
-                            
-                            </tbody>
-                        </table>
+                    <div class="form-group col-md-2">
+                        <label for="inputZip" style="font-family: 'Hind Siliguri', sans-serif; font-size: 1.13em;">Postal / Zip Code <span class="imp">*</span></label>
+                        <input type="text" class="form-control" id="inputZip">
                     </div>
-                </div><br><br><br>
+                </div>
+
+                <div class="input-box">
+                  <span class="details"><br>Academic Details</span>
+                </div>
+
+                <div class="ed">
+                    <div class="form-row">
+                      <div class="col-md-4 mb-3">
+                        <label for="validationTooltip01">Qualification <span class="imp">*</span></label>
+                        <select id="inputState" class="form-control">
+                          <option selected>Choose...</option>
+                          <option>PHD</option>
+                          <option>Post Graduation</option>
+                          <option>Graduation</option>
+                          <option>Intermediate</option>
+                          <option>High School</option>
+                        </select>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <label for="validationTooltip01">From (Year) <span class="imp">*</span> </label>
+                        <input type="text" class="form-control" id="validationTooltip01" required>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <label for="validationTooltip01">To (Year) <span class="imp">*</span> </label>
+                        <input type="text" class="form-control" id="validationTooltip01" required>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-4 mb-3">
+                        <label for="validationTooltip01">Degree <span class="imp">*</span></label>
+                        <select id="inputState" class="form-control">
+                          <option selected>Choose...</option>
+                          <option>Bachelor of Applied Science (BAS)</option>
+                          <option>Bachelor of Fine Arts (BFA)</option>
+                          <option>Bachelor of Science (B.S.)</option>
+                          <option>Bachelor of Arts (B.A.)</option>
+                        </select>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <label for="validationTooltip01">Specialization <span class="imp">*</span></label>
+                        <input type="text" class="form-control" id="validationTooltip01" required>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <label for="validationTooltip01">University/Institute <span class="imp">*</span> </label>
+                        <input type="text" class="form-control" id="validationTooltip01" required>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-4 mb-3">
+                        <label for="validationTooltip01">Percentage <span class="imp">*</span></label>
+                        <input type="text" class="form-control" id="validationTooltip01" required>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <label for="validationTooltip01">CGPA (out of 10) <span class="imp">*</span></label>
+                        <input type="text" class="form-control" id="validationTooltip01" required>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                  <span class="details"><br>Gender <span class="imp">*</span></span>
+                </div>
+
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline1">Male</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline2">Female</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadioInline2">Prefer not to say</label>
+                </div>
 
 
-                <h4>5.9    &nbsp;&nbsp;Sec-LEACH</h4>
-                <p>Sec-LEACH [16] provides an eﬃcient solution for secur-ing communications in LEACH. It used random-key pre-distribution and μTESLA for secure hierarchical WSN with dynamic 
-                    cluster formation. Sec-LEACH applied random key distribution to LEACH, and introduced symmetric key and one way hash chain to provide confidentiality and freshness. 
-                    Sec-LEACH provides authenticity, integrity, confidentiality and freshness to communications.
-                </p>
-                <h4>5.10    &nbsp;&nbsp;SS-LEACH</h4>
-                <p>Di Wu et al.[23] introduced a secure hierarchical protocol called SS-LEACH, which is the secure version of LEACH. SS-LEACH improves the method of electing cluster heads 
-                    and forms dynamic stochastic multi-paths cluster heads chains to communicate to the base station, In this way it improve the energy-eﬃciency and hence prolong the lifetime 
-                    of the network. It used the key pre-distribution and self-localization technique to secure the basic LEACH protocol. It prevent compromised node to take part in the network 
-                    and preserve the secrecy of the packet. It avoids selective forwarding, HELLO flooding and Sybil attack.</p>
-                <h4>5.11    &nbsp;&nbsp;RLEACH</h4>
-                <p>Secure solution for LEACH has been introduced called RLEACH[25] in which cluster are formed dynamically and periodically. In RLEACH the orphan node problem is raised due to 
-                    random pair-wise key scheme so they have used im-proved random pair-wise key scheme to overcome. RLEACH has been used the one way hash chain, symmetric and asym-metric cryptography 
-                    to provide security in the LEACH Hi-erarchical routing protocol. RLEACH resists to many attack like spoofed, alter and replayed information, sinkhole, worm-hole, selective forwarding, 
-                    HELLO flooding and Sybil attack.
-                </p>
-                <h4>5.12    &nbsp;&nbsp;ESMR</h4>
-                <p>Proposed model is the security solution for the LEACH called eﬃcient security model of routing protocol (ESMR)[3], which use only public key cryptography technique.
-                     Simu-lation result shows that the performance of ESMR is not as good as LEACH in no attacker environment, but it becomes better and better with the number of attacker increases. 
-                     This protocol only deals with out-sider attack and computation
-                </p>
-                <h4>5.13    &nbsp;&nbsp;SRPBCG</h4>
-                <p>Z. Quan et al.[19] proposed a routing protocol called secure routing protocol cluster-gene-based for WSNs(SRPBCG). The selection of CH is same as LEACH. Objective of the 
-                    scheme is to manage trust and reputation locally and to authenticate identity of node with minimal overhead and time delay. Bi-ological authentication mechanism has been used which 
-                    is a very eﬀective authentication method, biological ’gene’ as encryption key is very secure and eﬀective key distribution scheme, which require only few memory and communication overhead. 
-                    It only deals with the adversary’s attack and com-promised nodes. Security of protocol is inconsiderately, when forming a cluster and transmitting the message. Computa-tion and communication 
-                    burden are more in this protocol.</p><br><br>
-            <h2>6.&nbsp;ANALYSIS</h2>
-            <p>
-                In the previous section, we have seen various secure cluster-based routing protocols. Table 1. describes several secu-rity goals achieved by diﬀerent secure hierarchical protocols;
-                F-LEACH, SHEER and Sec-LEACH routing protocol main-tain the most whereas NHRPA and ESMR gain the least. WSNs routing protocols are vulnerable of various attacks. 
-                The secure protocols which prevented routing protocol at-tacks are listed in Table 2. Depends upon the comparison we can say that SLEACH, SHEER, Sec-LEACH, SS-LEACH 
-                and RLEACH are more secure than rest of the secure proto-cols. To add security in the routing protocol, we have to take help from the various security mechanisms. Use of diﬀer-ent 
-                security mechanism by the various secure routing proto-cols is listed in Table 3. This evaluation is very helpful for the researchers, who want to implement secure hierarchical routing protocol. To impose the security into the existing protocol sometime increases the complexity of the protocol and decreases the lifetime of the network. Energy eﬃciency analyses for diﬀerent secure routing protocols are in Table 4.
+                <div class="input-box">
+                  <span class="details"><br>Position Details</span>
+                </div>
 
-            </p><br><br>
-            
-            <h2>7.&nbsp;CONCLUSION</h2>
-            <p>Routing protocol aﬀects the performance of the network in the form of energy eﬃciency, security, resiliency and lifetime. So that secure, robust and eﬃcient routing protocol 
-                is the ba-sic requirement. In this paper, we have studied and analyzed a number of secure and energy eﬃcient hierarchical routing protocols for WSN. 
-                The information provided in the paper would be beneficial for the researchers to work in this area.
-            </p><br>
+                <div class="po">
+                  <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                      <label for="validationTooltip01">Position you are applying for : <span class="imp">*</span></label>
+                      <input type="text" class="form-control" id="validationTooltip01" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <label for="validationTooltip01">Available Start Date : <span class="imp">*</span></label>
+                      <input type="text" class="form-control" id="validationTooltip01" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <label for="validationTooltip01">Desired Pay : </label>
+                      <input type="text" class="form-control" id="validationTooltip01" required>
+                    </div>
+                  </div>
+                </div>
 
-            <h3>Acknowledgment:</h3>
-            <p>The authors are indebted to In-formation Security Education and Awareness (ISEA) Project, MCIT, Department of Information Technology, Govt. of In-dia, for sponsoring this research and 
-                development activity.
-            </p><br><br>
 
-            <h2>8. &nbsp;REFERENCES</h2>
-            <p> [1]&nbsp;&nbsp; J. N. Al-karaki and A. E. Kamal. Routing techniques in wireless sensor networks: A survey. <i>IEEE Wireless Communications</i>, 11(6):6–28, December 2004.
+                <div class="input-box">
+                  <span class="details"><br>Desired Employment</span>
+                </div>
+
+                <div class="custom-control-inline">
+                  <p style="font-size: 1.05em;">Employment Type <span class="imp">*</span></p>
+                </div>
+                <label class="checkbox-inline">
+                  <input type="checkbox" value="">&nbsp;Full Time &nbsp;&nbsp;</label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" value="">&nbsp;Part Time &nbsp;&nbsp;</label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value="">&nbsp;Internship &nbsp;&nbsp;</label>
+
                 <br>
 
-                [2]&nbsp;&nbsp; M. Bohge and W. Trappe. An authentication framework for hierarchical ad hoc sensor networks. In <i>Proceedings of the 2nd ACM workshop on Wireless security (WiSe ’03)</i>, pages 79–87, New York, NY, USA, 2003. ACM.
-                <br>
-                [3]&nbsp;&nbsp; J. Chen, H. Zhang, and J. Hu. An eﬃciency security model of routing protocol in wireless sensor networks. In Proc. of the 2008 Second Asia International Conference on Modelling and Simulation, pages 59–64, Washington, DC, USA, 2008. IEEE Computer Society.
-                <br>
-                [4]&nbsp;&nbsp; A. C. Ferreira, M. A. Vilaça, L. B. Oliveira, E. Habib, H.C. Wong, and A. A. Loureiro. On the security of cluster-based communication protocols for wireless sensor networks. 
-                In <i>Proc. 4th IEEE International Conference on Networking (ICNŠ05), volume 3420 of Lecture Notes in Computer Science</i>, pages 449–458, 2005.
-                <br>
-                [5]&nbsp;&nbsp; N. Gautam, W. Lee, and J. Pyun. Track-sector clustering for energy eﬃcient routing in wireless sensor networks. In <i>Proc. of the 2009 Ninth IEEE International Conference on Computer and Information Technology</i>, volume 2, pages 116–121. IEEE Computer Society, 2009.
-                <br>
-                [6]&nbsp;&nbsp; W. R. Heinzelman, A. Chandrakasan, and Balakrishnan. Energy-eﬃcient communication protocol for wireless microsensor networks. In <i>Proc. of the 33rd Hawaii International Conference on System Sciences (HICSS ’00)</i>, page 8020, Washington, DC, USA, January 2000. IEEE Computer Society.
-                <br>
-                [7]&nbsp;&nbsp; C. Hong-bing, Y. Geng, and H. Su-jun. Nhrpa: a novel hierarchical routing protocol algorithm for wireless sensor networks. <i>The Journal of China Universities of Posts and Telecommunications</i>, 15(3):75–81, September 2008.
-                <br>
-                [8]&nbsp;&nbsp; J. Ibriq and I. Mahgoub. A secure hierarchical routing protocol for wireless sensor networks. In <i>In: Proc. 10th IEEE International Conference on Communication Systems</i>, pages 1–U6, Singapore, October 2006.
-                <br>
-                [9]&nbsp;&nbsp; S. Jung, Y. Han, and T. M. Chung. The concentric clustering scheme for eﬃcient energy consumption in the pegasis. In <i>Proc. 9th International Conference on
-                    Advanced Communication Technology</i>, volume 1, pages 260–265, February 2007.
-                <br>
-                [10]&nbsp;&nbsp; C. Karlof and D. Wagner. Secure routing in sensor networks:attacks and countermeasures. <i>Ad Hoc Networks</i>, 1:293–315, May 2003.
-                <br>
-                [11]&nbsp;&nbsp; S. Lindsey and C. S. Raghavendra. Pegasis: Power-eﬃcient gathering in sensor information systems. In <i>IEEE Aerospace Conference Proceedings</i>, pages 1125–1130, 2002.
-                <br>
-                [12]&nbsp;&nbsp; V. Loscrì, G. Morabito, and S. Marano. A two-levels hierarchy for low-energy adaptative clustering hierarchy (tl-leach). In <i>Proc. VTC2005</i>, pages 1809–1813, Dallas (USA), September 2005.
-                <br>
-                [13]&nbsp;&nbsp; J. J. Lotf, M. Hosseinzadeh, and R. M. Albuliev. Hierarchical routing in wireless sensor networks: a survey. In <i>2nd International Conference on Computer Engineering and Technology</i>, volume 3, pages 650–654, April 2010.
-                <br>
-                [14]&nbsp;&nbsp; A. Manjeshwar and D. P. Agrawal. Teen: a routing protocol for enhanced eﬃciency in wireless sensor networks. In <i>Proc. 15th International In Parallel and Distributed Processing Symposium</i>, volume 3, pages 2009–2015. IEEE Computer Society, April 2001.
-                <br>
-                [15]&nbsp;&nbsp; A. Manjeshwar and D. P. Agrawal. Apteen: A hybrid protocol for eﬃcient routing and comprehensive information retrieval in wireless sensor networks. In <i>Proc. of the 16th International Parallel and Distributed Processing Symposium (IPDPS ’02)</i>, page 48, Washington, DC, USA, 2002. IEEE Computer Society.
-                <br>
-                [16]&nbsp;&nbsp; L. B. Oliveira, A. Ferreira, M. A. Vilaça, H. C. Wong, Bern, R. Dahab, and A. A. F. Loureiro. Secleach-on the security of clustered sensor networks. <i>Signal Processing</i>, 87(12):2882–2895, December 2007.
-                <br>
-                [17]&nbsp;&nbsp; L. B. Oliveira, H. C. Wong, M. Bern, R. Dahab, and F. Loureiro. Secleach - a random key distribution solution for securing clustered sensor networks. In <i>Proc. of the Fifth IEEE International Symposium on Network Computing and Applications</i>, pages 145–154, Washington, DC, USA, 2006. IEEE Computer Society.
-                <br>
-                [18]&nbsp;&nbsp; B. Parno, M. Luk, E. Gaustad, and A. Perrig. Lha-sp: secure protocols for hierarchical wireless sensor networks. In <i>Proc. of 9th IFIP/IEEE International Symposium on Integrated Network Management</i>, pages 31–44, May 2005.
-                <br>
-                [19]&nbsp;&nbsp; Z. Quan and J. Li. Secure routing protocol cluster-gene-based for wireless sensor networks. In <i>Proc. The 1st International Conference on Information Science and Engineering (ICISE2009)</i>, pages 4098–4102, December 2009.
-                <br>
-                [20]&nbsp;&nbsp; J. Sen. A survey on wireless sensor network security. <i>International Journal of Communication Networks and Information Security (IJCNIS)</i>, 1(2):59–82, August 2009.
-                <br>
-                [21]&nbsp;&nbsp; R. Srinath, A. V. Reddy, and R. Srinivasan. Ac: Cluster based secure routing protocol for wsn. In <i>Proc. of the Third International Conference on Networking and Services</i>, page 45, Washington, DC, USA, 2007. IEEE Computer Society.
-                <br>
-                [22]&nbsp;&nbsp; M. Tubaishat, J. Yin, B. Panja, and S. Madria. A secure hierarchical model for sensor network. <i>ACM SIGMOD Record</i>, 33(1):7–13, March 2004.
-                <br>
-                [23]&nbsp;&nbsp; D. Wu, G. Hu, and G. Ni. Research and improve on secure routing protocols in wireless sensor networks. In <i>4th IEEE International Conference on Circuits and Systems for Communications (ICCSC 2008)</i>, pages 853–856, May 2008.
-                <br>
-                [24]&nbsp;&nbsp; M. Ye, C. Li, G. Chen, and J. Wu. Eecs: An energy eﬃcient clustering scheme in wireless sensor networks. In <i>Proc. of the IEEE International Performance Computing and Communications Conference</i>, pages 535–540, 2005.
-                <br>
-                [25]&nbsp;&nbsp; K. Zhang, C. Wang, and C. Wang. A secure routing protocol for cluster-based wireless sensor networks using group key management. In <i>Proc. 4th IEEE International conference on Wireless Communications, Networking and Mobile Computing (WiCOM’08)</i>, pages 1–5, October 2008.
-                <br>
-             </p>
-           
+                <div class="input-box">
+                  <span class="details"><br>Job Location Preference</span>
+                </div>
+
+                <div class="custom-control-inline">
+                  <p style="font-size: 1.05em;">Are you willing to work anywhere in abroad?</p>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadioInline1">Yes</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline2">No</label>
+                </div>
+
+                <div class="input-box">
+                  <span class="details"><br>Upload Resume <span class="imp">*</span></span>
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-md-4 ">
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="customFile">
+                      <label class="custom-file-label" for="customFile">Choose file</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="input-box">
+                  <span class="details"><br>Cover Letter</span>
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-md-8 ">
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                </div>
+              </br>
+
+                <p style="font-family: 'Hind Siliguri', sans-serif;font-size: 1.15em;">How were you referred to us?</p>
+
+                <div class="row">
+                  <div class="form-group col-md-4 ">
+                    <select id="inputState" class="form-control">
+                      <option selected>Choose...</option>
+                      <option>LinkedIn</option>
+                      <option>Indeed</option>
+                      <option>D2C</option>
+                    </select>
+                </div>
+                </div>
+                
+                </br></br>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="gridCheck">
+                      <label class="form-check-label" for="gridCheck">
+                       I hereby declare that the information stated above is true to the best of my knowledge.<span class="imp">*</span>
+                      </label>
+                    </div>
+                  </div>
+
+                <div class="button">
+                <input type="submit" value="Apply">
+                </div>
+            </form>
+
+            <br><br>
+
+            <p style="text-align: center; "><a href="https://njha07.github.io/B519029-IWT-Project/" style="text-decoration: none; font-size:1.3em; color:black; font-family: 'Hind Siliguri', sans-serif;">IWT Project of <i style="color:rgb(133, 7, 9);">@NehaJha,&nbsp;B519029</i></a></p>
+
+            </div>
+        </div>
+
 
 	
 	 <!-- Footer -->
-    <footer id="footer">
-        <br><br><br>
-        <a href="https://njha07.github.io/B519029-IWT-MicroProject/" style="text-decoration: none; font-size:1.3em; color:black; font-family: 'Libre Baskerville', serif;">IWT Micro Project of <i style="color:rgb(133, 7, 9);">@NehaJha,&nbsp;B519029</i></a>
-        <br />
-    </footer>
+    
 
 </body>
 </html>
